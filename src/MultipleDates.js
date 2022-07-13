@@ -27,9 +27,47 @@ const MultipleDates = () => {
 
     return (
         <>
+            <h2>See Images Within a Date Range</h2>
             <div className = 'multiple-date-select'>
-                <h2>See Images Within a Date Range</h2>
                 <span style = {{display: 'flex', gap: '1rem'}}>
+                <p>Start Year</p>
+                    <select 
+                        placeholder = 'year'
+                        onChange = {(e) => {
+                            const chosenStartYear = e.target.value;
+                            setStartYear(chosenStartYear);
+                    }}>
+                        <option value = 'null'>Year</option>
+                        <option value = '1995'>1995</option>
+                        <option value = '1996'>1996</option>
+                        <option value = '1997'>1997</option>
+                        <option value = '1998'>1998</option>
+                        <option value = '1999'>1999</option>
+                        <option value = '2000'>2000</option>
+                        <option value = '2001'>2001</option>
+                        <option value = '2002'>2002</option>
+                        <option value = '2003'>2003</option>
+                        <option value = '2004'>2004</option>
+                        <option value = '2005'>2005</option>
+                        <option value = '2006'>2006</option>
+                        <option value = '2007'>2007</option>
+                        <option value = '2008'>2008</option>
+                        <option value = '2009'>2009</option>
+                        <option value = '2010'>2010</option>
+                        <option value = '2011'>2011</option>
+                        <option value = '2012'>2012</option>
+                        <option value = '2013'>2013</option>
+                        <option value = '2014'>2014</option>
+                        <option value = '2015'>2015</option>
+                        <option value = '2016'>2016</option>
+                        <option value = '2017'>2017</option>
+                        <option value = '2018'>2018</option>
+                        <option value = '2019'>2019</option>
+                        <option value = '2020'>2020</option>
+                        <option value = '2021'>2021</option>
+                        <option value = '2022'>2022</option>
+                    </select>
+
                     <p>Start Month</p>
                     <select onChange = {(e) => {
                             const chosenStartMonth = e.target.value;
@@ -49,7 +87,6 @@ const MultipleDates = () => {
                         <option value = '11'>November</option>
                         <option value = '12'>December</option>
                     </select>
-                    {startMonth}
 
                     <p>Start Day</p>
                     <select onChange = {(e) => {
@@ -89,14 +126,15 @@ const MultipleDates = () => {
                         <option value = '30'>30</option>
                         <option value = '31'>31</option>
                     </select>
-                    {startDay}
+                </span>
 
-                    <p>Start Year</p>
+                <span style = {{display: 'flex', gap: '1rem'}}>
+                <p>End Year</p>
                     <select 
                         placeholder = 'year'
                         onChange = {(e) => {
-                            const chosenStartYear = e.target.value;
-                            setStartYear(chosenStartYear);
+                            const chosenEndYear = e.target.value;
+                            setEndYear(chosenEndYear);
                     }}>
                         <option value = 'null'>Year</option>
                         <option value = '1995'>1995</option>
@@ -128,10 +166,7 @@ const MultipleDates = () => {
                         <option value = '2021'>2021</option>
                         <option value = '2022'>2022</option>
                     </select>
-                    {startYear}
-                </span>
 
-                <span style = {{display: 'flex', gap: '1rem'}}>
                     <p>End Month</p>
                     <select onChange = {(e) => {
                             const chosenEndMonth = e.target.value;
@@ -151,7 +186,6 @@ const MultipleDates = () => {
                         <option value = '11'>November</option>
                         <option value = '12'>December</option>
                     </select>
-                    {endMonth}
 
                     <p>End Day</p>
                     <select onChange = {(e) => {
@@ -191,52 +225,12 @@ const MultipleDates = () => {
                         <option value = '30'>30</option>
                         <option value = '31'>31</option>
                     </select>
-                    {endDay}
-
-                    <p>End Year</p>
-                    <select 
-                        placeholder = 'year'
-                        onChange = {(e) => {
-                            const chosenEndYear = e.target.value;
-                            setEndYear(chosenEndYear);
-                    }}>
-                        <option value = 'null'>Year</option>
-                        <option value = '1995'>1995</option>
-                        <option value = '1996'>1996</option>
-                        <option value = '1997'>1997</option>
-                        <option value = '1998'>1998</option>
-                        <option value = '1999'>1999</option>
-                        <option value = '2000'>2000</option>
-                        <option value = '2001'>2001</option>
-                        <option value = '2002'>2002</option>
-                        <option value = '2003'>2003</option>
-                        <option value = '2004'>2004</option>
-                        <option value = '2005'>2005</option>
-                        <option value = '2006'>2006</option>
-                        <option value = '2007'>2007</option>
-                        <option value = '2008'>2008</option>
-                        <option value = '2009'>2009</option>
-                        <option value = '2010'>2010</option>
-                        <option value = '2011'>2011</option>
-                        <option value = '2012'>2012</option>
-                        <option value = '2013'>2013</option>
-                        <option value = '2014'>2014</option>
-                        <option value = '2015'>2015</option>
-                        <option value = '2016'>2016</option>
-                        <option value = '2017'>2017</option>
-                        <option value = '2018'>2018</option>
-                        <option value = '2019'>2019</option>
-                        <option value = '2020'>2020</option>
-                        <option value = '2021'>2021</option>
-                        <option value = '2022'>2022</option>
-                    </select>
-                    {endYear}
                 </span>
             </div>
             <div className = 'button'>
                 <button
                     onClick = {() => searchMultipleImages(startDay, startMonth, startYear, endDay, endMonth, endYear)}
-                >See Your Image</button>
+                >Search</button>
             </div>
             <hr />
 

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from './Home';
 import SingleDate from './SingleDate';
 import MultipleDates from './MultipleDates';
+import './App.css';
 
 
 
@@ -13,7 +14,8 @@ const App = () => {
     return (
         <Router>
         <div className = 'app'>
-            <h1>Welcome to NASA's Astronomy Picture of the Day!</h1>
+            <h1>Welcome to APOD Search!</h1>
+            <h2>Search for a <Link to = '/single'>single</Link> image, or search for a <Link to = 'range'>date range</Link>.</h2>
             <Switch>
                 <Route path = '/' exact>
                     <Home />

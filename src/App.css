@@ -1,5 +1,9 @@
 body {
-    background-color: #212426;
+    /* background-color: #212426; */
+    background-image: url('https://cdn.theatlantic.com/thumbor/VCoUZjXa6W3jOoQ9yG4pFlR59LY=/80x43:2688x1999/1200x900/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .app {
@@ -10,8 +14,39 @@ body {
     flex-direction: column;;
 }
 
-h1 {
-    font-size: 6rem;
+.Header {
+    /* width: 80%; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 32px;
+  }
+
+  .Header-blocking {
+    /* border-b w-full inline-block border-blue-400 py-8 */
+    border-bottom-width: 1px;
+    width: 100%;
+    display: inline-block;
+    border-color: rgb(96 165 250);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .Header-blocking-home-link {
+    /* md:float-left block */
+    float: left;
+    display: block;
+  }
+
+  .Header-blocking-title {
+    /* cursor-pointer font-bold text-4xl text-white */
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 40px;
+    /* color: white; */
     background: linear-gradient(
         90deg,
         rgb(80, 90, 206) 0%,
@@ -21,6 +56,41 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+  }
+
+  .Header-blocking-nav {
+    /* hidden md:float-left md:contents */
+    float: left;
+    display: contents;
+  }
+
+  .Header-blocking-nav-links {
+    /* md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer */
+    float: right;
+    margin-top: 8px;
+    vertical-align: middle;
+    margin-left: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 24px;
+    background: linear-gradient(
+        90deg,
+        rgb(80, 90, 206) 0%,
+        rgb(147, 147, 148) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+  }
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
 }
 
 .container {
@@ -32,7 +102,12 @@ h1 {
     flex-wrap: wrap;
 }
 
+.card {
+    text-align: center;
+}
+
 .image-card {
+    text-align: left;
     width: 460px;
     height: 460px;
     margin: 1.5rem;
@@ -71,10 +146,10 @@ h1 {
 .image-card div:nth-of-type(3) {
     z-index: 2;
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.5;
     font-size: 20px;
     color: white;
-    padding: 12px 0 0 8px;
+    padding: 12px 12px 12px 18px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,8 +162,19 @@ h1 {
 }
 
 .see-more {
-    font-size: 24px;
-    margin-left: 3rem;
+    text-align: center;
+    display: inline-block;
+    background-color: black;
+    opacity: 0.4;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 500;
+    border-radius: 9999px;
+    color: white;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .imageDisplay {
@@ -105,13 +191,13 @@ h1 {
 
 .single-date {
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.5;
     font-size: 28px;
     text-indent: 8rem;;
 }
 
 .single-explanation {
-    font-size: 36px;
+    font-size: 28px;
     text-align: justify;
     text-justify: inter-word;
     text-indent: 0;
@@ -122,6 +208,3 @@ h1 {
     font-size: 16px;
 }
 
-.see-more {
-    text-align: center;
-}

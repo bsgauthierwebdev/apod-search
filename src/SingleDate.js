@@ -139,12 +139,15 @@ const SingleDate = () => {
                     </div>
                     <div className = 'single-date'>
                         <p>{image.date}</p>
-                    <div className = 'single-explanation'>
-                        <p>{image.explanation}</p>
-                    </div>
-                    <div className = 'single-copyright'>
-                        <p>Copyright: {image.copyright}</p>
-                    </div>
+                        <div className = 'single-title'>
+                            <h3>{image.title}</h3>
+                        </div>
+                        <div className = 'single-explanation'>
+                            <p>{image.explanation}</p>
+                        </div>
+                        <div className = 'single-copyright'>
+                            <p>Copyright: {image.copyright}</p>
+                        </div>
                     </div>
                 </div>
             </div>

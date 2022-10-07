@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import Header from './Header';
 import Home from './Home';
+import Today from './Today';
 import SingleDate from './SingleDate';
 import MultipleDates from './MultipleDates';
 import './App.css';
@@ -12,13 +14,18 @@ import './App.css';
 const App = () => {
 
     return (
+        <>
         <Router>
+        <div className = 'Nav'>
+            <Header />
+        </div>
         <div className = 'app'>
-            <h1>Welcome to APOD Search!</h1>
-            <h2>Search for a <Link to = '/single'>single</Link> image, or search for a <Link to = 'range'>date range</Link>.</h2>
             <Switch>
                 <Route path = '/' exact>
                     <Home />
+                </Route>
+                <Route path = '/today'>
+                    <Today />
                 </Route>
                 <Route path = '/single'>
                     <SingleDate />
@@ -29,6 +36,7 @@ const App = () => {
             </Switch>
         </div>
         </Router>
+        </>
     );
 }
 

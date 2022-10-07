@@ -15,7 +15,6 @@ const ImageCard = ({image}) => {
                 </div>
                 <div>
                     <span>{image.title}</span>
-                    <p>{image.copyright}</p>
                 </div>
             </div>
             <div className = 'see-more'>

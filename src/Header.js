@@ -16,6 +16,8 @@ const Header = () => {
                     <div className = 'Header-blocking-nav'>
                         <div className = 'Header-blocking-nav-links'>
                             <span>
+                                <Link to = '/test'>Test</Link>
+                                {' | '}
                                 <Link to = '/today'>Today's Image</Link>
                                 {' | '}
                                 <Link to = '/single'>Search Images</Link>

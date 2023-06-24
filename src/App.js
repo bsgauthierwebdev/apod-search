@@ -5,6 +5,7 @@ import Home from './Home';
 import Today from './Today';
 import SingleDate from './SingleDate';
 import MultipleDates from './MultipleDates';
+import Test from './Test';
 import './App.css';
 
 
@@ -32,6 +33,9 @@ const App = () => {
                 </Route>
                 <Route path = '/range'>
                     <MultipleDates />
+                </Route>
+                <Route path = '/test'>
+                    <Test />
                 </Route>
             </Switch>
         </div>
